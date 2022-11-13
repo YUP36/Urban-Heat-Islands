@@ -20,7 +20,6 @@ public class UrbanHeatIsland{
                                         Double.parseDouble(info[2]),
                                         Double.parseDouble(info[3])));
         }
-        Collections.sort(locations);
     }
 
     static double CONVERSION_FACTOR = 0.0113;

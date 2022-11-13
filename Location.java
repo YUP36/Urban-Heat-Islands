@@ -1,4 +1,4 @@
-public class Location implements Comparable<Location>{
+public class Location{
     Double reduxTemp;
     Double percentInPoverty;
     Double percentGreenSpace;
@@ -15,22 +15,5 @@ public class Location implements Comparable<Location>{
         ret += "Percent below poverty line: " + percentInPoverty + "\n";
         ret += "Percent green space: " + percentGreenSpace + "\n";
         return ret;
-    }
-
-    @Override
-    public int compareTo(Location o) {
-        Double povertyDiff = o.percentInPoverty - this.percentInPoverty;
-        if(povertyDiff > 0) {
-            return 1;
-        } else if (povertyDiff < 0) {
-            return -1;
-        }
-        Double greenSpaceDiff = o.percentGreenSpace - this.percentGreenSpace;
-        if(greenSpaceDiff > 0) {
-            return 1;
-        } else if(greenSpaceDiff < 0) {
-            return -1;
-        }
-        return 0;
     }
 }
